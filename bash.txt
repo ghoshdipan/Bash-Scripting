@@ -1,0 +1,112 @@
+This contains usage for bash scripting!
+
+HELLO BASH SCRIPTING
+
+Question -> See directory
+Answer -> pwd
+
+Question -> print command
+Answer -> echo "print anything inside quotes"
+
+Question -> print many lines using heredoc
+Answer -> 
+cat << heredocTEXT
+This is a string inside heredoc
+heredocTEXT
+
+Question -> see file permissions
+Answer -> ls -al
+
+Question -> list of directories
+Answer -> ls
+
+Question -> make a file executable with name 'hello.sh'
+Answer -> chmod +x hello.sh
+
+Question -> execute a file with name 'hello.sh'
+Answer -> ./hello.sh
+
+REDIRECT TO FILE
+
+Question -> save contents of a file to another file
+Command ->  #! /bin/bash
+            echo "Hello & welcome to bash scripting" > file.txt
+
+Question -> read contents from terminal & save into a file named 'file.txt' (OVERRIDES)
+Answer -> cat > file.txt
+
+Question -> read contents from terminal & save into a file named 'file.txt' (CONCAT)
+Answer -> cat >> file.txt
+
+COMMENTS
+
+Question -> one line commnet
+Answer -> #this is a commnet
+
+Question -> multi line commnet
+Answer -> :'echo "dipan"
+            this is a commnet
+            also in another line'
+
+CONDITIONAL STATEMENTS
+
+Question -> if else condition
+Answer -> count=10                                      |    age=30
+        if [ $count -eq 10 ]                            |    if [ "$age" -gt 18 ] && [ "$age" -lt 40 ]
+        then echo "the value is 10"                     |    then echo "age is correct"
+        else echo "other value"                         |    else echo "age is in-correct"
+        fi                                              |    fi
+
+Question -> else if condition
+Answer -> count=10
+        if (( $count > 11 ))
+        then echo "the value is not 10"
+        elif [ $count -eq 10 ]
+        then echo "val 10"
+        fi
+
+Question -> greater & less than < >
+Answer -> count=10
+        if (( $count > 11 ))
+        then echo "the value is 10"
+        else echo "other value"
+        fi
+
+Question -> greater than & less than symbol use instead of -gt & -lt , -le, -ge
+Answer -> both [ -eq, -ne ] & (( >,<,<=, >= )) brackets can be used 
+
+Question -> AND command
+Answer -> && or -a
+
+Question -> OR command
+Answer -> || or -o
+
+LOOPS
+
+Question -> while loop
+Answer -> num=10
+        while [ "$num" -gt 0 ]
+        do echo "num $num"
+        num=$(( num-1 ))
+        done
+
+Question -> until loop
+Answer -> num=100
+        until [ "$num" -eq 89 ]
+        do echo "num $num"
+        num=$(( num-1 ))
+        done
+
+Question -> for loop
+Answer -> for ((i=0;i<=5;i+=2))
+        do echo $i
+        done
+
+STRING INPUTS
+
+Question -> print command
+Answer -> echo "dipan"
+
+Question -> print command
+Answer -> echo "dipan"
+
